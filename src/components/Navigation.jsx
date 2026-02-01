@@ -13,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { emptyshopProducts } from "../Slice/Feautures/Categories";
 import CartItems from "../pages/CartItems";
@@ -21,6 +21,8 @@ import CartItems from "../pages/CartItems";
 function Navigation({ top = true, bottom = true }) {
   const [scrollstate, setScroll] = useState(false);
   const location = useLocation();
+
+  const { cartItems } = useSelector((state) => state.cart);
 
   useEffect(() => {
     console.log(
@@ -88,14 +90,14 @@ function Navigation({ top = true, bottom = true }) {
                   size="x"
                   className="text-2xl"
                 />
-                {/* {CartItems.length >= 1 && (
-                  <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
-                    {CartItems.length}
+                {cartItems.length >= 1 && (
+                  <span className="bg-primary-color/60 text-text-color flex h-5 w-5 items-center justify-center rounded-full text-[13px] font-bold">
+                    {cartItems.length}
                   </span>
-                )} */}
-                <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
-                  {CartItems.length}
-                </span>
+                )}
+                {/* <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
+                  {cartItems.length}
+                </span> */}
               </Link>
             </div>
           )}
