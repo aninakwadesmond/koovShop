@@ -42,7 +42,7 @@ body {
     @apply inline-block cursor-pointer rounded-md border p-0.5 font-medium duration-500;
   }
   .swiperButton {
-    @apply hover:bg-secondary-color/50 absolute top-[50%] z-50 -translate-y-[50%] cursor-pointer rounded-full p-2 text-xl text-gray-950/70 duration-300;
+    @apply hover:bg-secondary-color/50 bg-secondary-color/30 absolute top-[50%] z-50 -translate-y-[50%] cursor-pointer rounded-full p-2 text-xl text-gray-950/70 duration-300;
   }
   .swiper-wrapper {
     @apply w-full;

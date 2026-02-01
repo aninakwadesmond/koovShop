@@ -16,6 +16,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import { emptyshopProducts } from "../Slice/Feautures/Categories";
+import CartItems from "../pages/CartItems";
 
 function Navigation({ top = true, bottom = true }) {
   const [scrollstate, setScroll] = useState(false);
@@ -78,12 +79,23 @@ function Navigation({ top = true, bottom = true }) {
                   // }}
                 />
               </Link>
-              <Link to="/cart">
+              <Link
+                to="/cart"
+                className="flex items-center justify-center gap-1"
+              >
                 <FontAwesomeIcon
                   icon={faCartPlus}
                   size="x"
                   className="text-2xl"
                 />
+                {CartItems.length >= 1 && (
+                  <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
+                    {CartItems.length}
+                  </span>
+                )}
+                {/* <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
+                  {CartItems.length}
+                </span> */}
               </Link>
             </div>
           )}
