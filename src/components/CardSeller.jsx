@@ -27,10 +27,10 @@ function CardSeller({ product }) {
     >
       <div
         className="flex h-[10rem] w-full flex-col items-start justify-start gap-2 bg-cover bg-center bg-no-repeat"
-        // style={{ backgroundImage: "url('../../public/images/image-1.jpg')" }}
+        // style={{ backgroundImage: "url('/images/image-1.jpg')" }}
       >
         <img
-          // src={"../../public/images/image-2.jpg"}
+          // src={"/images/image-2.jpg"}
           src={image}
           alt="image-full"
           className="h-full w-full"

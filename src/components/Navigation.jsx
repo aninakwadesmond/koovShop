@@ -69,7 +69,7 @@ function Navigation({ top = true, bottom = true }) {
                 to="/"
               >
                 <img
-                  src="../../public/images/logo-name.png"
+                  src="/images/logo-name.png"
                   alt="logo-name"
                   className="w-[90%]"
                   // style={{

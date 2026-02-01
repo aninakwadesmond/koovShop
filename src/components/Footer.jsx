@@ -46,7 +46,7 @@ function Connect() {
     <div className="flex-cols-center mt-4 mb-14 gap-2">
       <p className="h-10 w-40 bg-red-300">
         <img
-          src="../../public/images/logo-name.png"
+          src="/images/logo-name.png"
           alt="logo-image"
           className="h-full w-full"
         />

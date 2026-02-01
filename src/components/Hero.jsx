@@ -3,7 +3,7 @@ function Hero({ image }) {
     <div className="relative h-[44vh] w-full">
       <div className="h-full w-full">
         <img
-          src={`../../public/images/${image}.jpg`}
+          src={`/images/${image}.jpg`}
           alt="hero-image"
           className="h-full w-full object-cover"
         />
