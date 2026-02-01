@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-color: #523c00;
+  --color-secondary-color: #ece1ba;
+  --color-text-color: #fff;
+}
+.swiper .swiper-wrapper {
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @apply min-h-screen overflow-y-auto;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@layer components {
+  .button {
+    @apply inline-block cursor-pointer rounded-md border p-0.5 font-medium duration-500;
+  }
+  .swiperButton {
+    @apply hover:bg-secondary-color/50 absolute top-[50%] z-50 -translate-y-[50%] cursor-pointer rounded-full p-2 text-xl text-gray-950/70 duration-300;
+  }
+  .swiper-wrapper {
+    @apply w-full;
+  }
+  .buttonForm {
+    @apply text-text-color bg-primary-color mx-auto mt-5 w-[90%] cursor-pointer rounded-sm bg-linear-to-r to-gray-700 py-2 text-sm font-semibold tracking-wide uppercase;
+  }
+}
+
+@layer utilities {
+  .flex-cols {
+    @apply flex flex-col items-start justify-start;
+  }
+  .flex-rows {
+    @apply flex items-center justify-start;
+  }
+  .flex-row-start {
+    @apply flex items-start justify-start;
+  }
+  .flex-row-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-rows-between {
+    @apply flex items-start justify-between;
+  }
+  .flex-cols-center {
+    @apply flex w-full flex-col items-center justify-center;
+  }
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+  .flex-col-start {
+    @apply flex flex-col items-start justify-start;
+  }
+  /* remove input default increment and decrement */
+  .no-spinner::-webkit-inner-spin-button,
+  .no-spinner::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .no-spinner {
+    -moz-appearance: textfield;
+  }
+}
