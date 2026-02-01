@@ -88,14 +88,14 @@ function Navigation({ top = true, bottom = true }) {
                   size="x"
                   className="text-2xl"
                 />
-                {CartItems.length >= 1 && (
+                {/* {CartItems.length >= 1 && (
                   <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
                     {CartItems.length}
                   </span>
-                )}
-                {/* <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
+                )} */}
+                <span className="bg-primary-color/60 text-text-color flex h-6 w-6 items-center justify-center rounded-full text-[13px] font-bold">
                   {CartItems.length}
-                </span> */}
+                </span>
               </Link>
             </div>
           )}
